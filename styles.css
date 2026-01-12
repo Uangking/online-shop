@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+header {
+  background-color: #101820FF;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  color: #F2AA4CFF;
+}
+
+header .logo {
+  width: 50px;
+  height: 50px;
+  background-color: #F2AA4CFF;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header h2 {
+  margin: 0;
+}
+
+section {
+  background-color: rgb(226, 237, 255);
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+}
+
+aside {
+  display: none;
+}
+
+nav {
+  width: 100%;
+  background: #2d3b52FF;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+nav a {
+  font-size: 18px;
+  color: #F2AA4CFF;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+footer {
+  background-color: #101820FF;
+  padding: 10px;
+  text-align: center;
+  color: #F2AA4CFF;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: flex-start;
+  flex: 1;
+  align-content: flex-start;
+  width: 85%;
+}
+
+.sidebar-right {
+  width: 15%;
+  background-color: #2d3b52FF;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar-right h4 {
+  color: #F2AA4CFF;
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.sidebar-right ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.sidebar-right li {
+  margin-bottom: 10px;
+}
+
+.sidebar-right a {
+  color: #F2AA4CFF;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar-right a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-right p {
+  color: #e0e0e0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.products h3 {
+  width: 100%;
+  color: #101820FF;
+  font-size: 28px;
+  margin: 0 0 10px 0;
+}
+
+.products > p {
+  width: 100%;
+  color: #333;
+  line-height: 1.6;
+}
+
+.product-card {
+  flex: 0 1 calc(33.333% - 20px);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  color: #101820FF;
+}
+
+.product-card .product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  overflow: hidden;
+}
+
+.product-card .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #101820FF;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #F2AA4CFF;
+  box-shadow: 0 0 5px rgba(242, 170, 76, 0.3);
+}
+
+.submit-btn {
+  background-color: #101820FF;
+  color: #F2AA4CFF;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #2d3b52FF;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h4 {
+  color: #101820FF;
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: #333;
+}
