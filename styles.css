@@ -464,7 +464,6 @@ footer {
   color: #333;
 }
 
-/* Shopping Cart Styles */
 .cart-container {
   width: 85%;
   padding: 30px;
@@ -677,7 +676,6 @@ footer {
   color: #101820FF;
 }
 
-/* Responsive Cart Design */
 @media (max-width: 768px) {
   .cart-content {
     flex-direction: column;
@@ -702,7 +700,6 @@ footer {
   }
 }
 
-/* Payment Section Styles */
 .payment-section {
   margin: 15px 0;
   padding: 15px;
