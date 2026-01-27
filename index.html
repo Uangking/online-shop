@@ -24,30 +24,42 @@
 </header>
 <section>
 
-<div class="products">
-    <div class="product-card">
-        <div class="product-image"><img src="GoodbyeBadingProduct.jpg" alt="Goodbye Bading"></div>
-        <h3>Goodbye Bading</h3>
-        <p>Spectacular goodbye celebration fireworks</p>
+<div class="home-content">
+    <div class="welcome-section">
+        <h1>Welcome to Ambatublow Store</h1>
+        <p>Your premier destination for premium fireworks and pyrotechnic products. Experience spectacular celebrations with our finest selection.</p>
     </div>
-    
-    <div class="product-card">
-        <div class="product-image"><img src="BinLadenProduct.png" alt="Bin Laden"></div>
-        <h3>Bin Laden</h3>
-        <p>Explosive entertainment for major events</p>
+
+    <div class="featured-product">
+        <h2>Featured Product</h2>
+        <div class="featured-card">
+            <div class="featured-image"><img src="AtomicBombProduct.jpg" alt="Atomic Bomb"></div>
+            <div class="featured-info">
+                <h3>Atomic Bomb</h3>
+                <p>Maximum impact fireworks display</p>
+                <p class="featured-description">Experience the ultimate fireworks display with our Atomic Bomb product. Perfect for large events and celebrations that demand maximum impact.</p>
+                <div class="featured-footer">
+                    <span class="featured-price">900 Pesos</span>
+                    <button class="featured-btn" onclick="addToCart('Atomic Bomb', 900)">Add to Cart</button>
+                </div>
+                <p id="featuredMessage" style="color: green; margin-top: 10px; display: none; font-weight: bold; text-align: center;">Product added!</p>
+            </div>
+        </div>
     </div>
-    
-    <div class="product-card">
-        <div class="product-image"><img src="AtomicBombProduct.jpg" alt="Atomic Bomb"></div>
-        <h3>Atomic Bomb</h3>
-        <p>Maximum impact fireworks display</p>
+
+    <div class="video-section">
+        <h2>Watch Our Showcase</h2>
+        <div class="video-container">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 </div>
 
 <div class="sidebar-left">
   <nav>
     <ul>
-    <li><a href="index.html">Home</a></li>
+     <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
       <li><a href="shoppingcart.html">Shopping Cart</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
@@ -59,13 +71,27 @@
 </section>
 
 <footer>
-
  <p>2026 copyright Ambatublow Store</p>
-
-
 </footer>
 
+<script>
+  var messageTimeouts = {};
 
+  function addToCart(productName, price) {
+    var messageId = 'featuredMessage';
+    var messageElement = document.getElementById(messageId);
+    
+    messageElement.style.display = 'block';
+    
+    if (messageTimeouts[messageId]) {
+      clearTimeout(messageTimeouts[messageId]);
+    }
+    
+    messageTimeouts[messageId] = setTimeout(function() {
+      messageElement.style.display = 'none';
+    }, 3000);
+  }
+</script>
 
     </body>
 </html>

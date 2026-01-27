@@ -21,9 +21,22 @@
     <a href="login.html" class="login-btn">Login</a>
   </div>
 </header>
-<section>
-
+<section style="flex-direction: row;">
+<div class="sidebar-left">
+  <nav>
+    <ul>
+     <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="shoppingcart.html">Shopping Cart</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+</div>
 <div class="cart-container">
+
+  
   <h1>Payment</h1>
   
   <div class="cart-content">
@@ -100,28 +113,43 @@
         </select>
       </div>
       
-      <button class="checkout-btn">Place Order</button>
+      <button class="checkout-btn" onclick="processPayment(this)">Place Order</button>
       <a href="shoppingcart.html" class="continue-shopping">Back to Cart</a>
     </div>
   </div>
 </div>
 
-<div class="sidebar-left">
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shoppingcart.html">Shopping Cart</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="profile.html">Profile</a></li>
-    </ul>
-  </nav>
-</div>
+
+
 
 </section>
 
 <footer>
  <p>2026 copyright Ambatublow Store</p>
 </footer>
+
+<script>
+  function processPayment(btn) {
+    const paymentMethod = document.getElementById('payment-method').value;
+
+    if (!paymentMethod) {
+      alert('Please select a payment method');
+      return;
+    }
+
+    const originalText = btn.textContent;
+    btn.textContent = 'Processing...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.disabled = false;
+
+      window.location.href = "transaction-confirmation.html";
+    }, 2000);
+  }
+</script>
+
+
     </body>
 </html>     

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ambatublow Store | Products</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+<header>
+  <div class="header-left">
+    <a href="index.html">
+      <div class="logo">
+        <img src="logo.jpg" alt="Ambatublow Store Logo">
+      </div>
+    </a>
+    <h2>Ambatublow Store</h2>
+  </div>
+  <div class="header-right">
+    <a href="login.html" class="login-btn">Login</a>
+  </div>
+</header>
+
+<section style="flex-direction: row;">
+    <div class="sidebar-left">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="shoppingcart.html">Shopping Cart</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="products">
+    <div class="search-section">
+  <input type="text" class="search-bar" placeholder="Search products...">
+
+  <br><br>
+    <div class="product-card">
+        <div class="product-image"><img src="GoodbyeBadingProduct.jpg" alt="Goodbye Bading"></div>
+        <h3>Goodbye Bading</h3>
+        <p>Spectacular goodbye celebration fireworks</p>
+        <div class="product-footer">
+            <span class="product-price">650 Pesos</span>
+            <button class="add-to-cart-btn" onclick="addToCart('Goodbye Bading', 650)">Add to Cart</button>
+        </div>
+        <p id="addedMessage1" style="color: green; margin-top: 10px; display: none; font-weight: bold; text-align: center;">Product added!</p>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image"><img src="BinLadenProduct.png" alt="Bin Laden"></div>
+        <h3>Bin Laden</h3>
+        <p>Explosive entertainment for major events</p>
+        <div class="product-footer">
+            <span class="product-price">750 Pesos</span>
+            <button class="add-to-cart-btn" onclick="addToCart('Bin Laden', 750)">Add to Cart</button>
+        </div>
+        <p id="addedMessage2" style="color: green; margin-top: 10px; display: none; font-weight: bold; text-align: center;">Product added!</p>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image"><img src="AtomicBombProduct.jpg" alt="Atomic Bomb"></div>
+        <h3>Atomic Bomb</h3>
+        <p>Maximum impact fireworks display</p>
+        <div class="product-footer">
+            <span class="product-price">900 Pesos</span>
+            <button class="add-to-cart-btn" onclick="addToCart('Atomic Bomb', 900)">Add to Cart</button>
+        </div>
+        <p id="addedMessage3" style="color: green; margin-top: 10px; display: none; font-weight: bold; text-align: center;">Product added!</p>
+    </div>
+</div>
+
+
+
+</div>
+
+</section>
+
+<footer>
+  <p>2026 copyright Ambatublow Store</p>
+</footer>
+
+<script>
+  var messageTimeouts = {};
+
+  function addToCart(productName, price) {
+    var messageId = 'addedMessage' + (productName === 'Goodbye Bading' ? '1' : productName === 'Bin Laden' ? '2' : '3');
+    var messageElement = document.getElementById(messageId);
+    
+    messageElement.style.display = 'block';
+    
+    if (messageTimeouts[messageId]) {
+      clearTimeout(messageTimeouts[messageId]);
+    }
+    
+    messageTimeouts[messageId] = setTimeout(function() {
+      messageElement.style.display = 'none';
+    }, 3000);
+  }
+</script>
+
+    </body>
+</html>
