@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ambatublow Store | Shopping Cart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+<header>
+  <div class="header-left">
+    <a href="index.html">
+      <div class="logo">
+        <img src="logo.jpg" alt="Ambatublow Store Logo">
+      </div>
+    </a>
+    <h2>Ambatublow Store</h2>
+  </div>
+  <div class="header-right">
+    <a href="login.html" class="login-btn">Login</a>
+  </div>
+</header>
+<section style="flex-direction: row;">
+  <div class="sidebar-left">
+  <nav>
+    <ul>
+     <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="shoppingcart.html">Shopping Cart</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="cart-container">
+  <h1>Shopping Cart</h1>
+  
+  <div class="cart-content">
+    <div class="cart-items">
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="cart-item-name">
+                <img src="GoodbyeBadingProduct.jpg" alt="Goodbye Bading" class="cart-item-img">
+                <span>Goodbye Bading</span>
+              </div>
+            </td>
+            <td>650 Pesos</td>
+            <td>
+              <div class="quantity-selector">
+                <button class="qty-btn">-</button>
+                <input type="number" value="2" min="1" class="qty-input">
+                <button class="qty-btn">+</button>
+              </div>
+            </td>
+            <td>1300 Pesos</td>
+            <td><button class="remove-btn">Remove</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart-item-name">
+                <img src="BinLadenProduct.png" alt="Bin Laden" class="cart-item-img">
+                <span>Bin Laden</span>
+              </div>
+            </td>
+            <td>750 Pesos</td>
+            <td>
+              <div class="quantity-selector">
+                <button class="qty-btn">-</button>
+                <input type="number" value="1" min="1" class="qty-input">
+                <button class="qty-btn">+</button>
+              </div>
+            </td>
+            <td>750 Pesos</td>
+            <td><button class="remove-btn">Remove</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart-item-name">
+                <img src="AtomicBombProduct.jpg" alt="Atomic Bomb" class="cart-item-img">
+                <span>Atomic Bomb</span>
+              </div>
+            </td>
+            <td>900 Pesos</td>
+            <td>
+              <div class="quantity-selector">
+                <button class="qty-btn">-</button>
+                <input type="number" value="1" min="1" class="qty-input">
+                <button class="qty-btn">+</button>
+              </div>
+            </td>
+            <td>900 Pesos</td>
+            <td><button class="remove-btn">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cart-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-row">
+        <span>Subtotal:</span>
+        <span>2950 Pesos</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping:</span>
+        <span>150 Pesos</span>
+      </div>
+      <div class="summary-total">
+        <span>Total:</span>
+        <span>3100 Pesos</span>
+      </div>
+      <a href="payment.html">
+      <button class="checkout-btn">Proceed to Checkout</button>
+      </a>
+      <a href="index.html" class="continue-shopping">Continue Shopping</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+</section>
+
+<footer>
+ <p>2026 copyright Ambatublow Store</p>
+</footer>
+    </body>
+</html> 

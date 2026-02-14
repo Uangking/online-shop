@@ -10,10 +10,14 @@
 
 
 <header>
-  <div class="logo">
-    <img src="logo.jpg" alt="Ambatublow Store Logo">
+  <div class="header-left">
+    <a href="index.html">
+      <div class="logo">
+        <img src="logo.jpg" alt="Ambatublow Store Logo">
+      </div>
+    </a>
+    <h2>Ambatublow Store</h2>
   </div>
-  <h2>Ambatublow Store</h2>
 </header>
 <section>
 
@@ -43,12 +47,15 @@
   
 </div>
 
-<div class="sidebar-right">
+<div class="sidebar-left">
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
+     <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="shoppingcart.html">Shopping Cart</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="profile.html">Profile</a></li>
     </ul>
   </nav>
 </div>
@@ -63,13 +70,14 @@
 </footer>
 
 <script>
-  document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+  var form = document.querySelector('.contact-form');
+  var successMessage = document.getElementById('successMessage');
+  
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
     
-    const successMessage = document.getElementById('successMessage');
     successMessage.style.display = 'block';
-
-    this.reset();
+    form.reset();
     
     setTimeout(function() {
       successMessage.style.display = 'none';

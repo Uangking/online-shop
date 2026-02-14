@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Transaction Confirmation | Ambatublow Store</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+<header>
+  <div class="header-left">
+    <a href="index.html">
+      <div class="logo">
+        <img src="logo.jpg" alt="Ambatublow Store Logo">
+      </div>
+    </a>
+    <h2>Ambatublow Store</h2>
+  </div>
+  <div class="header-right">
+    <a href="login.html" class="login-btn">Login</a>
+  </div>
+</header>
+
+<section style="flex-direction: row;">
+    <div class="sidebar-left">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="shoppingcart.html">Shopping Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="sidebar-middle">
+        <div class="confirmation-container">
+            <h1>Transaction Successful!</h1>
+            <p style="text-align: center; color: #666;">Thank you for your purchase. Your order has been confirmed.</p>
+
+            <div class="confirmation-info">
+                <div class="info-item">
+                    <label>Transaction Time:</label>
+                    <p id="transactionTime"></p>
+                </div>
+
+                <div class="info-item">
+                    <label>Status:</label>
+                    <p>Payment Received</p>
+                </div>
+
+                <div class="info-item full-width">
+                    <label>Order Summary:</label>
+                    <div class="order-items">
+                        <div class="order-item">
+                            <span>Goodbye Bading (Qty: 2)</span>
+                            <span>1300 Pesos</span>
+                        </div>
+                        <div class="order-item">
+                            <span>Bin Laden (Qty: 1)</span>
+                            <span>750 Pesos</span>
+                        </div>
+                        <div class="order-item">
+                            <span>Atomic Bomb (Qty: 1)</span>
+                            <span>900 Pesos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-item full-width">
+                    <label>Price Breakdown:</label>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Subtotal:</span>
+                            <span>2950 Pesos</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Shipping:</span>
+                            <span>150 Pesos</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total:</span>
+                            <span>3100 Pesos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <a href="index.html" class="btn">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Ambatublow Store. All rights reserved.</p>
+</footer>
+
+<script>
+    function showTransactionTime() {
+        var now = new Date();
+        var timeString = now.toLocaleString();
+        document.getElementById('transactionTime').textContent = timeString;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        showTransactionTime();
+    });
+</script>
+
+</body>
+</html>
